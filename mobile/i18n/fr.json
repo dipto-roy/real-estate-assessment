@@ -1,0 +1,59 @@
+{
+  "app": {
+    "title": "Gestion Immobilière"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "retry": "Réessayer",
+    "back": "Retour",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "send": "Envoyer",
+    "submit": "Soumettre",
+    "by": "Par"
+  },
+  "auth": {
+    "login": "Connexion",
+    "register": "S'inscrire",
+    "email": "Courriel",
+    "password": "Mot de passe",
+    "name": "Nom",
+    "role": "Rôle",
+    "logout": "Déconnexion"
+  },
+  "projects": {
+    "title": "Projets",
+    "name": "Nom du projet",
+    "description": "Description",
+    "createProject": "Créer un projet",
+    "viewDetails": "Voir les détails",
+    "noProjects": "Aucun projet trouvé",
+    "projectDetails": "Détails du projet"
+  },
+  "transactions": {
+    "title": "Transactions",
+    "amount": "Montant",
+    "buyer": "Acheteur",
+    "seller": "Vendeur",
+    "timestamp": "Date",
+    "noTransactions": "Aucune transaction trouvée",
+    "createTransaction": "Créer une transaction"
+  },
+  "messages": {
+    "title": "Messages",
+    "chat": "Discussion",
+    "sendMessage": "Envoyer un message",
+    "typeMessage": "Tapez un message...",
+    "noMessages": "Aucun message pour le moment",
+    "chatRoom": "Salon de discussion"
+  },
+  "settings": {
+    "title": "Paramètres",
+    "language": "Langue",
+    "english": "Anglais",
+    "french": "Français"
+  }
+}

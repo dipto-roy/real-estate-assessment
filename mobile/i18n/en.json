@@ -1,0 +1,59 @@
+{
+  "app": {
+    "title": "Real Estate Management"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry",
+    "back": "Back",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "send": "Send",
+    "submit": "Submit",
+    "by": "By"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "email": "Email",
+    "password": "Password",
+    "name": "Name",
+    "role": "Role",
+    "logout": "Logout"
+  },
+  "projects": {
+    "title": "Projects",
+    "name": "Project Name",
+    "description": "Description",
+    "createProject": "Create Project",
+    "viewDetails": "View Details",
+    "noProjects": "No projects found",
+    "projectDetails": "Project Details"
+  },
+  "transactions": {
+    "title": "Transactions",
+    "amount": "Amount",
+    "buyer": "Buyer",
+    "seller": "Seller",
+    "timestamp": "Date",
+    "noTransactions": "No transactions found",
+    "createTransaction": "Create Transaction"
+  },
+  "messages": {
+    "title": "Messages",
+    "chat": "Chat",
+    "sendMessage": "Send Message",
+    "typeMessage": "Type a message...",
+    "noMessages": "No messages yet",
+    "chatRoom": "Chat Room"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "english": "English",
+    "french": "French"
+  }
+}

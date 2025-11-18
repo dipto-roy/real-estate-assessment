@@ -1,0 +1,81 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Backend
+backend/dist/
+backend/.env
+
+# Mobile
+mobile/.expo/
+mobile/dist/
+mobile/web-build/
+
+# Prisma
+backend/prisma/migrations/
+
+# Testing
+coverage/
+*.log
+
+# OS
+.DS_Store
+.vscode/
+.idea/
+
+# Misc
+*.swp
+*.swo
+*~
+.tmp/
+
+#Files
+*.env
+*.env.local
+*.env.development
+*.env.test
+*.env.production
+# Expo
+.mobile/expo/
+.mobile/.expo-shared/
+
+# Documentation files
+DEPLOYMENT.md
+DOCUMENTATION_INDEX.md
+ENDPOINT_INTEGRATION_REPORT.md
+ENDPOINT_STATUS.md
+FRONTEND_EXPLAINED.md
+INTEGRATION_SUMMARY.md
+PROJECT_SUMMARY.md
+QUICK_REFERENCE.md
+QUICKSTART.md
+README.md
+TROUBLESHOOTING_GUIDE.md
+TEST_WEBSOCKET.md
+API_EXAMPLES.md
+CONNECTION_TEST.md
+CONNECTION_TESTS.md
+
+# Mobile docs
+mobile/MOBILE_REQUIREMENTS_CHECK.md
+
+# Test scripts
+diagnostic.sh
+setup.sh
+test-endpoints.sh
+test-websocket.sh
+websocket-test.html
+
+# Lock files (optional - remove these lines if you want to commit lock files)
+package-lock.json
+mobile/package-lock.json
+backend/package-lock.json
+
+# Environment files
+.env
+.env.example
+backend/.env
+backend/.env.example
+
+# End of file

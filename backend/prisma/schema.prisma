@@ -1,0 +1,117 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  buyer
+  seller
+  realtor
+}
+
+model User {
+  id        String   @id @default(uuid())
+  name      String
+  email     String   @unique
+  password  String
+  role      UserRole
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  createdProjects Project[]
+  buyerTransactions Transaction[] @relation("BuyerTransactions")
+  sellerTransactions Transaction[] @relation("SellerTransactions")
+  groupChatUsers GroupChatUser[]
+  sentMessages Message[]
+
+  @@map("users")
+}
+
+model Project {
+  id          String   @id @default(uuid())
+  name        String
+  description String?
+  createdById String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  createdBy    User          @relation(fields: [createdById], references: [id], onDelete: Cascade)
+  transactions Transaction[]
+  groupChats   GroupChat[]
+
+  @@map("projects")
+}
+
+model Transaction {
+  id        String   @id @default(uuid())
+  projectId String
+  buyerId   String
+  sellerId  String
+  amount    Float
+  timestamp DateTime @default(now())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  buyer   User    @relation("BuyerTransactions", fields: [buyerId], references: [id], onDelete: Cascade)
+  seller  User    @relation("SellerTransactions", fields: [sellerId], references: [id], onDelete: Cascade)
+
+  @@map("transactions")
+}
+
+model GroupChat {
+  id         String   @id @default(uuid())
+  projectId  String?
+  mlsId      String?
+  propertyId String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  // Relations
+  project        Project?        @relation(fields: [projectId], references: [id], onDelete: SetNull)
+  groupChatUsers GroupChatUser[]
+  messages       Message[]
+
+  @@map("group_chats")
+}
+
+model GroupChatUser {
+  id        String   @id @default(uuid())
+  chatId    String
+  userId    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  chat GroupChat @relation(fields: [chatId], references: [id], onDelete: Cascade)
+  user User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([chatId, userId])
+  @@map("group_chat_users")
+}
+
+model Message {
+  id        String   @id @default(uuid())
+  chatId    String
+  senderId  String
+  content   String   @db.Text
+  timestamp DateTime @default(now())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  chat   GroupChat @relation(fields: [chatId], references: [id], onDelete: Cascade)
+  sender User      @relation(fields: [senderId], references: [id], onDelete: Cascade)
+
+  @@map("messages")
+}
