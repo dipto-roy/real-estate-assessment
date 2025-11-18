@@ -1274,7 +1274,7 @@ SOFTWARE.
 **Dip Roy**
 
 - GitHub: [@dipto-roy](https://github.com/dipto-roy)
-- Email: your.email@example.com
+- Email: dipto.roy.cs@gmail.com
 
 ---
 
