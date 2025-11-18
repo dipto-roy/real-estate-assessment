@@ -40,7 +40,7 @@ coverage/
 .mobile/expo/
 .mobile/.expo-shared/
 
-# Documentation files
+# Documentation files (excluding main README.md)
 DEPLOYMENT.md
 DOCUMENTATION_INDEX.md
 ENDPOINT_INTEGRATION_REPORT.md
@@ -50,7 +50,6 @@ INTEGRATION_SUMMARY.md
 PROJECT_SUMMARY.md
 QUICK_REFERENCE.md
 QUICKSTART.md
-README.md
 TROUBLESHOOTING_GUIDE.md
 TEST_WEBSOCKET.md
 API_EXAMPLES.md
